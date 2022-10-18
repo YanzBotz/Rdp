@@ -1,6 +1,4 @@
-name: MarcelCyan
 
-on: workflow_dispatch
 name: MarcelCyan
 
 on: workflow_dispatch
