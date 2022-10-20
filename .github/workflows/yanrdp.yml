@@ -9,14 +9,6 @@ jobs:
     timeout-minutes: 999999999999999999
 
     steps:
-
-      run: |
-        Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/MuhamadMtrosymuhamad/RDP-FREE-WINDOWS/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/MuhamadMtrosymuhamad/RDP-FREE-WINDOWS/main/wallpaper.jpg -OutFile wallpaper.jpg
-        Invoke-WebRequest https://raw.githubusercontent.com/MuhamadMtrosymuhamad/RDP-FREE-WINDOWS/main/wallpaper.bat -OutFile wallpaper.bat
-    - name: Extracting Ngrok Files.
-      run: Expand-Archive ngrok.zip
     - name: Connecting to your Ngrok account.
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
